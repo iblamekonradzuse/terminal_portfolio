@@ -30,12 +30,19 @@ export const repo = async (args: string[]): Promise<string> => {
 
 // About
 export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}. 
+  return `
+Hi, I am ${config.name}. 
 Welcome to my website!
+
+I am a software engineering student at the University of Paderborn!
+I like Rust, Linux, Warhammer 40k and Coffee.
+I am currently looking for internships and job opportunities.
+
 More about me:
 'sumfetch' - short summary.
 'resume' - my latest resume.
-'readme' - my github readme.`;
+
+`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {
@@ -73,11 +80,6 @@ export const duckduckgo = async (args: string[]): Promise<string> => {
   return `Searching duckduckgo for ${args.join(' ')}...`;
 };
 
-export const bing = async (args: string[]): Promise<string> => {
-  window.open(`https://bing.com/search?q=${args.join(' ')}`);
-  return `Wow, really? You are using bing for ${args.join(' ')}?`;
-};
-
 export const reddit = async (args: string[]): Promise<string> => {
   window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`);
   return `Searching reddit for ${args.join(' ')}...`;
@@ -94,7 +96,7 @@ export const whoami = async (args: string[]): Promise<string> => {
 
 export const ls = async (args: string[]): Promise<string> => {
   return `a
-bunch
+space_invaders
 of
 fake
 directories`;
@@ -105,8 +107,29 @@ export const cd = async (args: string[]): Promise<string> => {
 if you want to help, you can hire me.`;
 };
 
+
+
 export const mywork = async (args: string[]): Promise<string> => {
-  return `some place holder`;
+  return `
+<u><a href="https://github.com/iblamekonradzuse/space_invaders_like_game" target="_blank">space invaders like game</a></u> // a game that is fully built in rust without using any game engine!
+
+<u><a href="https://github.com/iblamekonradzuse/fitness_tracker_rust" target="_blank">fitness application </a></u> // application with manual and api food, nutrition, and exercise, cardio tracking
+
+<u><a href="https://github.com/iblamekonradzuse/habit_tracker" target="_blank">habit tracker</a></u> // habit tracker with a calendar and daily, weekly and monthly habit streaks, frequency graph, categories and todo list
+
+<u><a href="https://github.com/iblamekonradzuse/real_time_chat_server" target="_blank">realtime chat server</a></u> // real time chat server and client with delete,edit,send message,rooms and admin panel
+
+<u><a href="https://github.com/iblamekonradzuse/terminal_portfolio" target="_blank">terminal portfolio</a></u> // linux terminal looking personal portfolio with commands and ascii art
+
+<u><a href="https://github.com/iblamekonradzuse/hotpoints" target="_blank">hotpoints</a></u> // react app that shows hot points in a google maps format using travel api and google maps api
+
+<u><a href="https://github.com/iblamekonradzuse/FinanceTracker_react" target="_blank">finance tracker</a></u> // monthly finance tracker application built in react 
+
+<u><a href="https://github.com/iblamekonradzuse/chatbot_openAI" target="_blank">popup chatbot </a></u> // chatbot that pops up on the bottom right of the screen and can answer questions using openAI
+
+<u><a href="https://github.com/iblamekonradzuse/image_generator_openAi" target="_blank">image generator </a></u> // image generator that uses openAI to generate images based on text input
+
+`;
 };
 
 export const date = async (args: string[]): Promise<string> => {
@@ -133,5 +156,7 @@ export const banner = (args?: string[]): string => {
 
 Type 'help' to see the list of available commands.
 Type 'sumfetch' to display summary.
+Type 'mywork' to see my work.
+Type 'resume' to see my resume.
 `;
 };
